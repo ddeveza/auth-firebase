@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import { Avatar, Checkbox, FormControlLabel, Grid, Paper, TextField, Typography } from "@material-ui/core";
+import { Avatar, FormControlLabel, Grid, Paper, TextField, Typography } from "@material-ui/core";
 import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
 import { useUserAuth } from "../context/UserAuthContext";
 

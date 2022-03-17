@@ -4,6 +4,8 @@ import { Col, Container, Row } from "react-bootstrap";
 import Signup from "./components/Signup";
 import "./App.css";
 import { UserContextProvider } from "./context/UserAuthContext";
+import Home from "./components/Home";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -13,6 +15,14 @@ function App() {
           <Col>
             <UserContextProvider>
               <Routes>
+                <Route
+                  path="/home"
+                  element={
+                    <ProtectedRoute>
+                      <Home />
+                    </ProtectedRoute>
+                  }
+                />
                 <Route path="/" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
               </Routes>
